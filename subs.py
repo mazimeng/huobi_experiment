@@ -29,7 +29,7 @@ class Sub(object):
         self.logger = logging.getLogger(str(self.__class__))
 
     def callback(self, candlestick_event: 'CandlestickEvent'):
-        self.logger.info(str(candlestick_event.tick))
+        self.logger.info(str(candlestick_event.tick.__dict__))
 
     def error(self, e: 'HuobiApiException'):
         self.logger.error(f"{e.error_code}, {e.error_message}")
