@@ -35,6 +35,7 @@ class Sub(object):
         self.logger.error(f"{e.error_code}, {e.error_message}")
 
     def run(self):
+        self.logger.info("started")
         market_client = MarketClient()
         market_client.sub_candlestick("btcusdt", CandlestickInterval.MIN1, self.callback, self.error)
 
