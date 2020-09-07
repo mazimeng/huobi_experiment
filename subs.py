@@ -41,6 +41,7 @@ class Sub(object):
 
 
 def main():
+    initialize_logging()
     sub = Sub()
     sub.run()
 
